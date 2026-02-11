@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ColdFusion-Übung: Grundlagen</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <p class="kicker">Interaktive ColdFusion-Übungen</p>
+      <h1>Exercise: ColdFusion Grundlagen</h1>
+      <div class="progress">
+        <div class="progress-bar" data-progress></div>
+      </div>
+      <div class="progress-meta" data-progress-text>Frage 1 von 50</div>
+    </header>
+
+    <main class="stage">
+      <section class="card question-card" data-question-card>
+        <div class="question-header">
+          <p class="question-title" data-title></p>
+          <p class="question-instruction" data-instruction></p>
+        </div>
+
+        <div class="code-block" data-code>
+          <pre><code data-code-text></code></pre>
+        </div>
+
+        <div class="answer-row">
+          <button type="button" class="ghost" data-clear>Antwort löschen</button>
+          <button type="button" class="primary" data-submit>Antwort prüfen</button>
+        </div>
+
+        <p class="feedback" data-feedback></p>
+
+        <div class="options" data-options></div>
+      </section>
+
+      <section class="card success-card is-hidden" data-success>
+        <h2>Richtige Antwort!</h2>
+        <p data-success-text>Du kannst zur nächsten Frage gehen.</p>
+        <p class="success-explanation" data-explanation></p>
+        <button type="button" class="secondary" data-next>Next Question »</button>
+      </section>
+
+      <section class="card info-card">
+        <h3>Was ist diese Übung?</h3>
+        <p>
+          Teste, was du zur ColdFusion-Präsentation gelernt hast. Es gibt 50 Aufgaben.
+          Du kannst erst weiter, wenn die aktuelle Antwort korrekt ist.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script src="tasks.js"></script>
+</body>
+</html>
